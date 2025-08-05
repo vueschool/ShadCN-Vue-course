@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { Button } from '@/components/ui/button'
+import LoginForm from '@/components/LoginForm.vue'
 </script>
 
 <template>
-  <div>
-    <Button as-child>
-      <a href="https://www.google.com">Google</a>
-    </Button>
-  </div>
+  <LoginForm class="m-5" />
 </template>
