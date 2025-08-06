@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LoginForm from '@/components/LoginForm.vue'
+import UserSettingsForm from '@/components/UserSettingsForm.vue'
 </script>
 
 <template>
-  <LoginForm class="m-5" />
+  <UserSettingsForm class="m-5" />
 </template>
