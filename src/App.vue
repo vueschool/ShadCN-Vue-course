@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LoginForm from '@/components/LoginForm.vue'
+import AlertDialogPlayground from '@/components/6/AlertDialogPlayground.vue'
 </script>
 
 <template>
-  <LoginForm class="m-5" />
+  <AlertDialogPlayground />
 </template>
