@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Calendar, Home, Inbox, Search, Settings } from 'lucide-vue-next'
+import { Calendar, Home, Inbox, Search, Settings, Plus } from 'lucide-vue-next'
 import {
   Sidebar,
   SidebarContent,
@@ -9,6 +9,12 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuAction,
+  SidebarMenuSkeleton,
+  SidebarSeparator,
+  SidebarFooter,
+  SidebarTrigger,
+  SidebarRail,
 } from '@/components/ui/sidebar'
 
 // Menu items.
@@ -42,7 +48,7 @@ const items = [
 </script>
 
 <template>
-  <Sidebar collapsible="icon" variant="floating">
+  <Sidebar collapsible="icon">
     <SidebarContent>
       <SidebarGroup>
         <SidebarGroupLabel>Application</SidebarGroupLabel>
@@ -54,11 +60,22 @@ const items = [
                   <component :is="item.icon" />
                   <span>{{ item.title }}</span>
                 </a>
+                <SidebarMenuAction>
+                  <Plus /> <span class="sr-only">Add Project</span>
+                </SidebarMenuAction>
               </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarSeparator />
+            <SidebarMenuItem v-for="i in 5" :key="i">
+              <SidebarMenuSkeleton />
             </SidebarMenuItem>
           </SidebarMenu>
         </SidebarGroupContent>
       </SidebarGroup>
     </SidebarContent>
+    <SidebarFooter>
+      <SidebarTrigger />
+    </SidebarFooter>
+    <SidebarRail />
   </Sidebar>
 </template>
