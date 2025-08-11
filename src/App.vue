@@ -1,7 +1,14 @@
 <script setup lang="ts">
-import UserSettingsForm from '@/components/UserSettingsForm.vue'
+import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+import AppSidebar from '@/components/AppSidebar.vue'
 </script>
 
 <template>
-  <UserSettingsForm class="m-5" />
+  <SidebarProvider>
+    <AppSidebar />
+    <main>
+      <SidebarTrigger />
+      hello world
+    </main>
+  </SidebarProvider>
 </template>
