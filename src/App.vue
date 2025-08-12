@@ -7,18 +7,7 @@ import { toast } from 'vue-sonner'
 import 'vue-sonner/style.css'
 
 const handleClick = () => {
-  toast.error('Event has been created', {
-    description: 'Sunday, December 03, 2023 at 9:00 AM',
-    duration: 3000,
-    action: {
-      label: 'Undo',
-      onClick: () => console.log('Undo'),
-    },
-    cancel: {
-      label: 'Cancel',
-      onClick: () => console.log('Cancel'),
-    },
-  })
+  document.documentElement.style.setProperty('--primary', 'oklch(0.577 0.245 27.325)')
 }
 </script>
 
@@ -26,7 +15,7 @@ const handleClick = () => {
   <SidebarProvider>
     <AppSidebar />
     <main>
-      <Button @click="handleClick">Click me</Button>
+      <Button @click="handleClick"> Click me </Button>
     </main>
   </SidebarProvider>
   <Toaster />
