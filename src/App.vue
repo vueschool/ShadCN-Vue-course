@@ -3,19 +3,25 @@ import { Button } from '@/components/ui/button'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import AppSidebar from '@/components/AppSidebar.vue'
 import { Toaster } from '@/components/ui/sonner'
-import { toast } from 'vue-sonner'
 import 'vue-sonner/style.css'
+import { useColorMode } from '@vueuse/core'
 
-const handleClick = () => {
-  document.documentElement.style.setProperty('--primary', 'oklch(0.577 0.245 27.325)')
-}
+const mode = useColorMode({
+  modes: {
+    rose: 'rose',
+    orange: 'orange',
+  },
+})
 </script>
 
 <template>
   <SidebarProvider>
     <AppSidebar />
     <main>
-      <Button @click="handleClick"> Click me </Button>
+      <Button @click="mode = 'light'"> Light</Button>
+      <Button @click="mode = 'dark'"> Dark</Button>
+      <Button @click="mode = 'rose'"> Rose</Button>
+      <Button @click="mode = 'orange'"> Orange</Button>
     </main>
   </SidebarProvider>
   <Toaster />

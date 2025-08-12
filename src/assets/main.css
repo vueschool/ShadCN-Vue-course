@@ -116,7 +116,28 @@
   --sidebar-border: oklch(0.279 0.041 260.031);
   --sidebar-ring: oklch(0.446 0.043 257.281);
 }
-
+.rose {
+  --primary: oklch(62.522% 0.24918 18.111);
+  --background: oklch(17.173% 0.03603 322.05);
+  --sidebar: oklch(17.173% 0.03603 322.05);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(62.522% 0.24918 18.111);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(62.522% 0.24918 18.111);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(23.237% 0.05326 322.408);
+}
+.orange {
+  --primary: oklch(65.653% 0.22087 36.412);
+  --background: oklch(26.448% 0.00003 271.152);
+  --sidebar: oklch(26.448% 0.00003 271.152);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(65.653% 0.22087 36.412);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(65.653% 0.22087 36.412);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(65.653% 0.22087 36.412);
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;
